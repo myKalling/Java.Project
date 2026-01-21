@@ -230,10 +230,10 @@ public class ArrayUtils {
     System.out.println(countOccurences(null, 1)); // Expected Output: 0
     System.out.println(countOccurences(new int[]{5}, 5)); // Expected Output: 1
     System.out.println(countOccurences(new int[]{-1, -1, -1}, -1)); // Expected Output: 3
-    System.out.println(NullArray(null));
-    System.out.println(SingleElement(new int[]{2}));
-    System.out.println(NegativeNumbers(new int[]{-2, -4, -6}));
-    System.out.println(AllEqualElements(new int[]{2, 2, 2}));
+    System.out.println(NullArray(null)); // Expected Output: 0
+    System.out.println(SingleElement(new int[]{2})); // Expected Output: 0
+    System.out.println(NegativeNumbers(new int[]{-2, -4, -6})); // Expected Output: 1
+    System.out.println(AllEqualElements(new int[]{2, 2, 2})); // Expected Output: 3
     }
 }
 
