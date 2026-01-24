@@ -24,7 +24,7 @@ public class Student {
     // toString method
     @Override
     public String toString() {
-        return "Student{name=Darious" + name + "', id=" + id + ", gpa=" + gpa + "}";
+        return "Student{name='" + name + "', id=" + id + ", gpa=" + gpa + "}";
     }
 
     // equals method
@@ -34,10 +34,17 @@ public class Student {
         if (obj == null || getClass() != obj.getClass()) return false; // check for null and class type
         Student student = (Student) obj;
         return id == student.id; // compare based on id
+    }
 
     // hashcode method
     @Override
     public int hashCode() {
         return Integer.hashCode(id); // generate hashcode based on id
+    }
+
+    // Main method for testing
+    public static void main(String[] args) {
+        Student student = new Student("John Doe", 12345, 3.5);
+        System.out.println(student);
     }
 }
