@@ -10,10 +10,16 @@ public class Car {
     private Battery battery;
 
     // Constructor
-    public Car(Engine engine, Wheel[] wheels) {
-        setEngine(engine);
-        setWheels(wheels);
-        setBattery(battery); 
+    public Car(Engine engine, Wheel[] wheels, Battery battery) {
+        if (engine == null) {
+            throw new IllegalArgumentException("Engine cannot be null.");
+        }
+        if (wheels == null || wheels.length == 0) {
+            throw new IllegalArgumentException("Wheels cannot be null or empty.");
+        }
+        this.engine = engine;
+        this.wheels = wheels;
+        this.battery = battery; // Battery can be null for non-electric cars
     }
 
     // Getters
@@ -48,8 +54,6 @@ public class Car {
         this.battery = battery; // Battery can be null for non-electric cars
     }
 
-    }
-
     @Override
     public String toString() {
         StringBuilder wheelsStr = new StringBuilder();
@@ -62,5 +66,4 @@ public class Car {
         }
         return "Car{engine=" + engine.toString() + ", wheels=[" + wheelsStr.toString() + "], battery=" + (battery != null ? battery.toString() : "null") + "}";
     }
-
 }
