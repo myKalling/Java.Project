@@ -2,15 +2,18 @@ package app;
 
 import parts.Engine;
 import parts.Wheel;
+import parts.Battery;
 
 public class Car {
     private Engine engine;
     private Wheel[] wheels;
+    private Battery battery;
 
     // Constructor
     public Car(Engine engine, Wheel[] wheels) {
-        SetEngine(engine);
+        setEngine(engine);
         setWheels(wheels);
+        setBattery(battery); 
     }
 
     // Getters
@@ -20,6 +23,10 @@ public class Car {
     
     public Wheel[] getWheels() {
         return wheels;
+    }
+
+    public Battery getBattery() {
+        return battery;
     }
 
     // Setters
@@ -37,9 +44,14 @@ public class Car {
         this.wheels = wheels;
     }
 
+    public void setBattery(Battery battery) {
+        this.battery = battery; // Battery can be null for non-electric cars
+    }
+
+    }
+
     @Override
     public String toString() {
-
         StringBuilder wheelsStr = new StringBuilder();
         for (Wheel wheel : wheels) {
             wheelsStr.append(wheel.toString()).append(", ");
@@ -48,6 +60,7 @@ public class Car {
         if (wheelsStr.length() > 0) {
             wheelsStr.setLength(wheelsStr.length() - 2);
         }
-        return "Car{engine=" + engine.toString() + ", wheels=[" + wheelsStr.toString() + "]}";
+        return "Car{engine=" + engine.toString() + ", wheels=[" + wheelsStr.toString() + "], battery=" + (battery != null ? battery.toString() : "null") + "}";
+    }
 
 }
