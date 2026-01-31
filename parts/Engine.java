@@ -7,7 +7,8 @@ public class Engine {
 
     //Constructor
     public Engine(int horsepower, String type) {
-    
+        setHorsepower(horsepower);
+        setType(type);
     }
     
     //Getters
@@ -20,7 +21,6 @@ public class Engine {
     }
 
     //Setters
-
     //Engine horsepower must be a positive number
     public void setHorsepower(int horsepower) {
         if (horsepower <= 0) {
@@ -34,6 +34,11 @@ public class Engine {
             throw new IllegalArgumentException("Engine type cannot be null or empty.");
         }
         this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "Engine{horsepower=" + horsepower + ", type='" + type + "'}";
     }
 
 }
