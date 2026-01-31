@@ -103,26 +103,16 @@ public class ArrayUtils {
     */
 
     public static int NullArray(int[] nums) {
-        if (nums == null || nums.length == 0) {
-            int sum = 0;
-            if (nums != null) {
-                for (int num : nums) {
-                    if (num % 2 == 0) {
-                        sum += num;
-                    }
-                }
-            }
-            if (sum == 0) {
-                System.out.println("✓ Null Array PASSED - sumOfEvens(null) = " + sum);
-                return sum;
-            } else {
-                System.out.println("✗ Null Array FAILED - Expected 0, got " + sum);
-                return -1;
-            }
-        } else {
-            System.out.println("✗ Null Array FAILED - Array is not null");
-            return -1;
+        if (nums == null) {
+            System.out.println("✓ Null Array PASSED - sumOfEvens(null) = 0");
+            return 0;
         }
+        if (nums.length == 0) {
+            System.out.println("✓ Null Array PASSED - sumOfEvens(null) = 0");
+            return 0;
+        }
+        System.out.println("✗ Null Array FAILED - Array is not null");
+        return -1;
     }
 
     /*
