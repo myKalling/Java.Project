@@ -15,8 +15,10 @@ public class ArraysArrayList {
             ArrayList<Integer> list = new ArrayList<>();
             list.add(1);
             list.add(2);
+    
+
             // list.add("string"); // This will cause a compile-time error because the list is defined to hold Integer objects
-            list.add(e: 3);
+            list.add(3);
             list.add(4);
             list.add(5);
             list.add(6); // This will work because ArrayList can grow dynamically
@@ -35,13 +37,13 @@ public class ArraysArrayList {
             }
 
             ArrayList<String> stringList = new ArrayList<>();
-            names.add(e: "Alice");
-            names.add(e: "Bob");
-            list.add(e: 123); // This will cause a compile-time error because the list is defined to hold String objects
-            names.add(e: "Charlie");
+            name.add("Alice");
+            name.add("Bob");
+            list.add(123); // This will cause a compile-time error because the list is defined to hold String objects
+            name.add("Charlie");
 
-            for (String names : stringList) {
-                System.out.println(names);
+            for (String name : stringList) {
+                System.out.println(name);
             }
     }
 }
