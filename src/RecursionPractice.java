@@ -11,7 +11,7 @@ public class RecursionPractice {
 
     }
     
-        // Recursive method to calculate the sum of an array
+    // Recursive method to calculate the sum of an array
 
         /*
         sumArray(int[] arr, int index)
@@ -21,11 +21,27 @@ public class RecursionPractice {
     public static int sumArray(int[] arr, int index) {
         
         if (index == arr.length) {
-            return 0; // base case: if index is out of bounds, return 0
+            return 0; // base case: when index reaches the end of the array,return 0
         }
-        
         return arr[index] + sumArray(arr, index + 1); // recursive case: add current element to sum of the rest
+
+        // return (index == arr.length) ? 0 : arr[index] + sumArray(arr, index + 1);
+
     }
+
+    // Methid to calculate the nth Fibinacci number
+    public static int fibonacci(int n) {
+        
+        if (n == 0) {
+            return 0; // base case: F(0) = 0
+        } else if (n == 1) {
+            return 1; // base case: F(1) = 1
+        }
+        return fibonacci(n - 1) + fibonacci(n - 2); // recursive case: F(n) = F(n-1) + F(n-2)
+
+        // return (n == 0) ? 0 : (n == 1) ? 1 : fibonacci(n - 1) + fibonacci(n - 2);
+
+
         
 
 }
