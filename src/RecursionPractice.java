@@ -9,9 +9,24 @@ public class RecursionPractice {
         return n * factorial(n - 1); // recursive case: n! = n * (n-1)!
         // return (n == 0) ? 1 : n * factorial(n - 1);
 
-    }     
-        
+    }
+    
+        // Recursive method to calculate the sum of an array
 
+        /*
+        sumArray(int[] arr, int index)
+        Write a recursive method that returns the total sum of the array. The base case happens when index reaches the end of the array. The recursive case adds the current element to the sum of the rest: arr[index] + sumArray(arr, index + 1). 
+         */
+
+    public static int sumArray(int[] arr, int index) {
+        
+        if (index == arr.length) {
+            return 0; // base case: if index is out of bounds, return 0
+        }
+        
+        return arr[index] + sumArray(arr, index + 1); // recursive case: add current element to sum of the rest
+    }
+        
 
 }
 
@@ -40,8 +55,5 @@ public class RecursionPractice {
         int fibResult = fibonacci(7);
         System.out.println("7th Fibonacci number: " + fibResult);
 
-
-        int n = 5;
-        System.out.println("Factorial of " + n + " is: " + factorial(n));
     }
 }
