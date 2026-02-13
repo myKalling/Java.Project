@@ -29,22 +29,27 @@ public class RecursionPractice {
 
     }
 
-    // Methid to calculate the nth Fibinacci number
+    // Method to calculate the nth Fibinacci number
+
+    /* 
+    Write a recursive method that returns the nth Fibonacci number. 
+    Use base cases for n == 0 and n == 1. 
+    The recursive case should return fibonacci(n - 1) + fibonacci(n - 2).
+     */
+
     public static int fibonacci(int n) {
         
         if (n == 0) {
-            return 0; // base case: F(0) = 0
-        } else if (n == 1) {
-            return 1; // base case: F(1) = 1
+            return 0; // base case: fibonacci(0) is 0
+        } 
+        if (n == 1) {
+            return 1; // base case: fibonacci(1) is 1
         }
-        return fibonacci(n - 1) + fibonacci(n - 2); // recursive case: F(n) = F(n-1) + F(n-2)
+        return fibonacci(n - 1) + fibonacci(n - 2); // recursive case: fibonacci(n) = fibonacci(n-1) + fibonacci(n-2)
 
         // return (n == 0) ? 0 : (n == 1) ? 1 : fibonacci(n - 1) + fibonacci(n - 2);
-
-
-        
-
-}
+       
+    }
 
 
 
