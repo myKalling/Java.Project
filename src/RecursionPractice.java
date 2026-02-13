@@ -24,7 +24,8 @@ public class RecursionPractice {
             return 0; // base case: when index reaches the end of the array,return 0
         }
         return arr[index] + sumArray(arr, index + 1); // recursive case: add current element to sum of the rest
-
+            // 2 + result of calling sumArray with the next index (index +1).
+            
         // return (index == arr.length) ? 0 : arr[index] + sumArray(arr, index + 1);
 
     }
