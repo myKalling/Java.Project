@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RecursionPractice",
+            "request": "launch",
+            "mainClass": "src.RecursionPractice",
+            "projectName": "Java.Project_27175c1a"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
