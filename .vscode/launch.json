@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BankDemo",
+            "request": "launch",
+            "mainClass": "BankDemo",
+            "projectName": "Java.Project_27175c1a"
+        },
+        {
+            "type": "java",
             "name": "RecursionPractice",
             "request": "launch",
             "mainClass": "src.RecursionPractice",
